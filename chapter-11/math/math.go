@@ -2,6 +2,9 @@ package math
 
 //find average value if float64 slice
 func Average(xs []float64) float64 {
+	if len(xs) == 0 {
+		return 0
+	}
 	total := float64(0)
 	for _, x := range xs {
 		total += x
@@ -11,6 +14,9 @@ func Average(xs []float64) float64 {
 
 //find max value of float64 slice
 func Max(slice []float64) (max float64) {
+	if len(slice) == 0 {
+		return 0
+	}
 	max = slice[0]
 	for _, i := range slice[1:] {
 		if i > max {
@@ -22,6 +28,9 @@ func Max(slice []float64) (max float64) {
 
 //find min value of float64 slice
 func Min(slice []float64) (min float64) {
+	if len(slice) == 0 {
+		return 0
+	}
 	min = slice[0]
 	for _, i := range slice[1:] {
 		if i < min {
